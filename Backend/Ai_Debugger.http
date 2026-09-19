@@ -1,0 +1,6 @@
+@Ai_Debugger_HostAddress = http://localhost:5255
+
+GET {{Ai_Debugger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
