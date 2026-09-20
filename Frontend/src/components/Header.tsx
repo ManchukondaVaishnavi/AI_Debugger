@@ -86,7 +86,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileSidebar }) => {
               <span>AI-Powered Assistant</span>
             </div>
             <p className="text-sm leading-relaxed text-slate-700">
-              AI Debugger is an AI-powered debugging assistant that helps developers understand software errors and application logs.
+              AI Debugger is an intelligent debugging system designed by Vaishnavi to help software engineers rapidly diagnose runtime exceptions, stack traces, and application logs.
             </p>
           </div>
 
@@ -97,14 +97,14 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileSidebar }) => {
               <span>How It Works</span>
             </div>
             <p className="text-sm leading-relaxed text-slate-600">
-              Paste your error log or stack trace, and AI Debugger analyzes it to identify the error type, likely root cause, evidence, possible causes, and recommended fixes.
+              Paste your error log or stack trace, and AI Debugger analyzes it using structured AI reasoning to identify the error type, likely root cause, evidence, possible causes, and recommended fixes.
             </p>
           </div>
 
           {/* Mission Quote */}
           <div className="p-4 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50/80 border-l-4 border-indigo-600">
             <p className="text-sm font-medium italic text-indigo-950 leading-relaxed">
-              "Built for developers who want to understand why something failed instead of spending hours digging through logs."
+              "Engineered for developers who want to understand why a failure occurred and receive actionable, verified solutions."
             </p>
           </div>
 

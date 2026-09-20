@@ -71,7 +71,7 @@ export const DebuggerPage: React.FC = () => {
           </div>
           <div>
             <h2 className="text-xl font-bold tracking-tight text-white">AI Debugger</h2>
-            <p className="text-xs text-slate-400 font-normal">Understand errors. Find solutions.</p>
+            <p className="text-xs text-slate-400 font-normal">Intelligent Log Diagnosis &amp; Root Cause Analysis</p>
           </div>
         </div>
 
@@ -99,7 +99,7 @@ export const DebuggerPage: React.FC = () => {
 
       {/* Footer info in sidebar */}
       <div className="text-[11px] text-slate-500 text-center">
-        AI Debugger &copy; 2026
+        AI Debugger &copy; 2026 &bull; Developed by Vaishnavi
       </div>
     </div>
   );
