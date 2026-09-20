@@ -1,6 +1,6 @@
 import type { AnalysisResponse } from '../types/debugging';
 
-const API_URL = 'https://ai-debugger-czb5.onrender.com/api/Debugging/InputLog';
+const API_URL = import.meta.env.VITE_API_URL || 'https://ai-debugger-api-d1s1.onrender.com/api/Debugging/InputLog';
 
 export class ApiError extends Error {
   status?: number;

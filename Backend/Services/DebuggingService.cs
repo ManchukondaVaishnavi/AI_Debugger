@@ -10,7 +10,7 @@ namespace AIDebugger.Services
         private readonly ChatClient _client;
         private readonly AnalysisRepository _analysisRepository; 
 
-        private const string Model = "gpt-5.6-terra";
+        private const string Model = "gpt-4o-mini";
 
         public DebuggingService(string apiKey, AnalysisRepository analysisRepository)
         {
