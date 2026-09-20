@@ -1,6 +1,9 @@
 import type { AnalysisResponse } from '../types/debugging';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://ai-debugger-api-d1s1.onrender.com/api/Debugging/InputLog';
+const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+const API_URL = import.meta.env.VITE_API_URL || (isLocal 
+  ? 'http://localhost:5255/api/Debugging/InputLog' 
+  : 'https://ai-debugger-api-d1s1.onrender.com/api/Debugging/InputLog');
 
 export class ApiError extends Error {
   status?: number;
