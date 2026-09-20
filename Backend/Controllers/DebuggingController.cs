@@ -28,7 +28,7 @@ namespace AIDebugger.Controllers
             }
             catch(Exception ex)
             {
-                throw new Exception($"Exception: {ex.Message}");
+                return StatusCode(500, new { message = ex.Message, error = ex.GetType().Name });
             }
         } 
     }

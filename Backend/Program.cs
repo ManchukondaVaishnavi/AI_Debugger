@@ -37,8 +37,7 @@ builder.Services.AddSingleton<MongoDbContext>(sp =>
 
     if (string.IsNullOrWhiteSpace(connectionString))
     {
-        throw new InvalidOperationException(
-            "MONGODB_CONNECTION_STRING is not configured.");
+        connectionString = "mongodb://localhost:27017";
     }
 
     return new MongoDbContext(connectionString, "AiDebugger");
@@ -53,8 +52,7 @@ builder.Services.AddScoped<DebuggingService>(sp =>
 
     if (string.IsNullOrWhiteSpace(apiKey))
     {
-        throw new InvalidOperationException(
-            "OPENAI_API_KEY is not configured.");
+        apiKey = "demo_mode";
     }
 
     var repository =

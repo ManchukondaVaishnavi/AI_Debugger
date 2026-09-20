@@ -32,7 +32,14 @@ export const analyzeLogApi = async (inputLog: string): Promise<AnalysisResponse>
       );
     }
     const errorText = await response.text();
-    throw new ApiError(errorText || `Error ${response.status}: Failed to analyze logs`, response.status);
+    let errorMessage = errorText;
+    try {
+      const parsed = JSON.parse(errorText);
+      errorMessage = parsed.message || parsed.error || errorText;
+    } catch {
+      // Keep raw errorText
+    }
+    throw new ApiError(errorMessage || `Error ${response.status}: Failed to analyze logs`, response.status);
   }
 
   const data = await response.json();
